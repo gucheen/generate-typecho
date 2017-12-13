@@ -1,11 +1,11 @@
 <?php
 /**
- * 这是 Typecho 0.9 系统的一套默认皮肤
+ * transform Typecho's default theme to GeneratePress
  * 
- * @package Typecho Replica Theme 
- * @author Typecho Team
- * @version 1.2
- * @link http://typecho.org
+ * @package Generate TypeCho 
+ * @author Typecho Team & Cheng Gu
+ * @version 1.0.2
+ * @link https://github.com/gucheen/generate-typecho
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
