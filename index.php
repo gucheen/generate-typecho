@@ -4,7 +4,7 @@
  * 
  * @package Generate TypeCho 
  * @author Typecho Team & Cheng Gu
- * @version 1.0.2
+ * @version 1.0.3
  * @link https://github.com/gucheen/generate-typecho
  */
 
