@@ -479,6 +479,10 @@ img.alignright {
   margin-top: 20px
 }
 
+.site-name {
+  padding: 0 40px;
+}
+
 @media(max-width:767px) {
   body {
     font-size: 81.25%
