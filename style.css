@@ -259,10 +259,9 @@ textarea {
 .page-navigator {
   list-style: none;
   margin: 20px 0;
-  padding: 0;
+  padding: 20px;
   text-align: center;
   background-color: #fff;
-  padding: 20px
 }
 
 .page-navigator li {
