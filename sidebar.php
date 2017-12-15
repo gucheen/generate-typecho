@@ -1,14 +1,14 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div class="col-mb-12 col-3 kit-hidden-tb" id="secondary" role="complementary">
 	<section class="widget">
-  <div class="site-search">
-    <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-      <label for="s" class="sr-only">Search</label>
-      <input type="text" id="s" name="s" class="text" placeholder="输入内容进行搜索" />
-      <button type="submit" class="submit">搜索</button>
-    </form>
-  </div>
-</section>
+        <div class="site-search">
+            <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+            <label for="s" class="sr-only"><?php _e('搜索'); ?></label>
+            <input type="text" id="s" name="s" class="text" placeholder="输入内容进行搜索" />
+            <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+            </form>
+        </div>
+    </section>
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section class="widget">
