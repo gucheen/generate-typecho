@@ -196,12 +196,10 @@ textarea {
 }
 
 .post-title {
-  margin: .83em 0;
   font-size: 1.4em
 }
 
 .post-meta {
-  margin-top: -.5em;
   padding: 0;
   color: #999;
   font-size: .92857em
@@ -260,7 +258,7 @@ textarea {
 
 .page-navigator {
   list-style: none;
-  margin: 25px 0;
+  margin: 20px 0;
   padding: 0;
   text-align: center;
   background-color: #fff;
@@ -492,6 +490,12 @@ img.alignright {
   #nav-menu a {
     float: none;
     display: inline-block
+  }
+  .post {
+    padding: 30px;
+  }
+  #comments {
+    padding: 30px;
   }
 }
 
