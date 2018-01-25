@@ -1,8 +1,12 @@
 body {
   background-color: #efefef;
-  color: #444;
-  font-family: Droid Serif, Georgia, Times New Roman, PingFang SC, Hiragino Sans GB, Source Han Sans CN, WenQuanYi Micro Hei, Microsoft Yahei, serif;
-  font-size: 1
+  line-height:2;
+  color:#424b50;
+  font-size:16px;
+  font-family:"Helvetica Neue",Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","Wenquanyi Micro Hei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
 }
 
 a {
@@ -17,12 +21,12 @@ a:hover {
 
 code,
 pre {
-  background: #f3f3f3;
   font-family: Menlo, Monaco, Consolas, Lucida Console, Courier New, monospace;
   font-size: .92857em
 }
 
 code {
+  background: #f3f3f3;
   padding: 2px 4px;
   color: #b94a48
 }
@@ -35,6 +39,7 @@ pre {
 
 pre code {
   padding: 3px;
+  background: none;
   color: #444
 }
 
@@ -543,4 +548,44 @@ img.alignright {
 
 .invisible {
   visibility: hidden
+}
+
+pre.prettyprint {
+  background-color: hsla(0,0%,95%,.2);
+  border: .5px solid #dbdbdb;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* The following class|color styles are derived from https://github.com/google/code-prettify/blob/master/src/prettify.css*/
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+  .str { color: #800 }  /* string content */
+  .kwd { color: #00f }  /* a keyword */
+  .com { color: #060 }  /* a comment */
+  .typ { color: red }  /* a type name */
+  .lit { color: #08c }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #800 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
 }

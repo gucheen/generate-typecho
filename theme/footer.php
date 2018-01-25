@@ -10,5 +10,7 @@
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+<script>addEventListener('load', function(event) { PR.prettyPrint(); }, false);</script>
 </body>
 </html>
