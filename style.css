@@ -118,8 +118,16 @@ textarea {
 }
 
 #header {
-  padding-top: 40px;
-  background-color: #fff
+  width: 100%;
+  background-color: #fff;
+}
+
+.header-content {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 40px;
+  max-width: 1285px;
+  align-items: center;
 }
 
 #logo {
@@ -137,29 +145,31 @@ textarea {
   font-style: italic
 }
 
-.nav-container {
-  width: 100%;
-  background-color: #222
+.site-name {
+  width: 50%;
 }
 
 #nav-menu {
-  margin: 25px 0 0;
-  padding: 0
+  flex: 1;
+  display: flex;
+  margin-top: 20px;
+  padding: 0;
+  justify-content: center;
 }
 
 #nav-menu a {
   display: block;
   padding: 0 20px;
   height: 55px;
+  font-size: 1.2em;
   line-height: 55px;
-  color: #fff;
-  float: left;
-  text-decoration: none
+  color: #666;
+  text-decoration: none;
 }
 
 #nav-menu .current,
 #nav-menu a:hover {
-  background: #666
+  color: #5d82e2;
 }
 
 #search {
@@ -484,10 +494,6 @@ img.alignright {
   margin-top: 20px
 }
 
-.site-name {
-  padding: 0 40px;
-}
-
 @media(max-width:767px) {
   body {
     font-size: 81.25%
@@ -495,9 +501,15 @@ img.alignright {
   #main {
     padding-right: 0
   }
-  #nav-menu a {
-    float: none;
-    display: inline-block
+  .header-content {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+  .site-name {
+    width: 100%;
+  }
+  #nav-menu {
+    margin-top: 0;
   }
   .post {
     padding: 30px;

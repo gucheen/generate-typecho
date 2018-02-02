@@ -16,7 +16,7 @@
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.min.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.min.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -31,32 +31,26 @@
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
 
-<header id="header" class="clearfix">
-    <div class="container">
-        <div class="row">
-            <div class="site-name">
-            <?php if ($this->options->logoUrl): ?>
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                    <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                </a>
-            <?php else: ?>
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-        	    <p class="description"><?php $this->options->description() ?></p>
-            <?php endif; ?>
-            </div>
-        </div><!-- end .row -->
+<header id="header">
+    <div class="header-content">
+        <div class="site-name">
+        <?php if ($this->options->logoUrl): ?>
+            <a id="logo" href="<?php $this->options->siteUrl(); ?>">
+                <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
+            </a>
+        <?php else: ?>
+            <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+            <p class="description"><?php $this->options->description() ?></p>
+        <?php endif; ?>
+        </div>
+        <nav id="nav-menu" role="navigation">
+            <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('主页'); ?></a>
+            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+            <?php while($pages->next()): ?>
+            <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+            <?php endwhile; ?>
+        </nav>
     </div>
-<div class="nav-container">
-  <div class="container">
-    <nav id="nav-menu" class="clearfix" role="navigation">
-        <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('主页'); ?></a>
-        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-        <?php while($pages->next()): ?>
-        <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-        <?php endwhile; ?>
-    </nav>
-  </div>
-</div>
 </header><!-- end #header -->
 <div id="body">
     <div class="container">
