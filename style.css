@@ -19,30 +19,6 @@ a:hover {
   color: #444
 }
 
-code,
-pre {
-  font-family: Menlo, Monaco, Consolas, Lucida Console, Courier New, monospace;
-  font-size: .92857em
-}
-
-code {
-  background: #f3f3f3;
-  padding: 2px 4px;
-  color: #b94a48
-}
-
-pre {
-  padding: 8px;
-  overflow: auto;
-  max-height: 400px
-}
-
-pre code {
-  padding: 3px;
-  background: none;
-  color: #444
-}
-
 blockquote {
   margin: 1em 0;
   padding-left: 1.5em;
@@ -562,42 +538,154 @@ img.alignright {
   visibility: hidden
 }
 
-pre.prettyprint {
-  background-color: hsla(0,0%,95%,.2);
-  border: .5px solid #dbdbdb;
+p > code, li > code, table code {
+  font-family: "Droid Sans Mono", monospace;
+  font-size: 85%;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 2px 6px;
+  background-color: #F1F1F1;
+  border-radius: 4px;
+}
+
+code {
+  font-family: "Droid Sans Mono", monospace;
+  font-size: 90%;
+}
+
+pre {
+  padding: 8px;
+  overflow: auto;
+  max-height: 400px;
+  background-color: rgba(241, 241, 241, 0.2);
+  border: 0.5px solid #DBDBDB;
   border-radius: 5px;
   color: #333;
 }
 
-/* The following class|color styles are derived from https://github.com/google/code-prettify/blob/master/src/prettify.css*/
-
-/* SPAN elements with the classes below are added by prettyprint. */
-.pln { color: #000 }  /* plain text */
-
-@media screen {
-  .str { color: #800 }  /* string content */
-  .kwd { color: #00f }  /* a keyword */
-  .com { color: #060 }  /* a comment */
-  .typ { color: red }  /* a type name */
-  .lit { color: #08c }  /* a literal value */
-  /* punctuation, lisp open bracket, lisp close bracket */
-  .pun, .opn, .clo { color: #660 }
-  .tag { color: #008 }  /* a markup tag name */
-  .atn { color: #606 }  /* a markup attribute name */
-  .atv { color: #800 }  /* a markup attribute value */
-  .dec, .var { color: #606 }  /* a declaration; a variable name */
-  .fun { color: red }  /* a function name */
+/* PRETTY PRINTING STYLES for prettify.js. */
+.prettyprint {
+  position: relative;
 }
 
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0;
+  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #B3B6B7;
+}
+ol.linenums li {
+  margin: 0;
+  font-family: "Droid Sans Mono", monospace;
+  font-size: 90%;
+  line-height: 24px;
+}
+
+/* The following class|color styles are derived from https://github.com/google/code-prettify/blob/master/src/prettify.css*/
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln {
+  color: #000;
+}
+
+/* plain text */
+@media screen {
+  .str {
+    color: #800;
+  }
+
+  /* string content */
+  .kwd {
+    color: #00f;
+  }
+
+  /* a keyword */
+  .com {
+    color: #060;
+  }
+
+  /* a comment */
+  .typ {
+    color: red;
+  }
+
+  /* a type name */
+  .lit {
+    color: #08c;
+  }
+
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo {
+    color: #660;
+  }
+
+  .tag {
+    color: #008;
+  }
+
+  /* a markup tag name */
+  .atn {
+    color: #606;
+  }
+
+  /* a markup attribute name */
+  .atv {
+    color: #800;
+  }
+
+  /* a markup attribute value */
+  .dec, .var {
+    color: #606;
+  }
+
+  /* a declaration; a variable name */
+  .fun {
+    color: red;
+  }
+
+  /* a function name */
+}
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
-  .str { color: #060 }
-  .kwd { color: #006; font-weight: bold }
-  .com { color: #600; font-style: italic }
-  .typ { color: #404; font-weight: bold }
-  .lit { color: #044 }
-  .pun, .opn, .clo { color: #440 }
-  .tag { color: #006; font-weight: bold }
-  .atn { color: #404 }
-  .atv { color: #060 }
+  .str {
+    color: #060;
+  }
+
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  .lit {
+    color: #044;
+  }
+
+  .pun, .opn, .clo {
+    color: #440;
+  }
+
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .atn {
+    color: #404;
+  }
+
+  .atv {
+    color: #060;
+  }
 }
+

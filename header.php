@@ -16,7 +16,7 @@
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.min.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.min.css'); ?>">
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -56,5 +56,5 @@
     <div class="container">
         <div class="row">
 
-    
-    
+
+
