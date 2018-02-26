@@ -154,7 +154,7 @@ textarea {
 }
 
 #search input {
-  padding-right: 30px;
+  padding: 10px 30px 10px 15px;
   background: #fafafa;
   border-color: #ccc
 }
@@ -162,7 +162,7 @@ textarea {
 #search button {
   position: absolute;
   right: 4px;
-  top: 10px;
+  top: 8px;
   border: none;
   padding: 0;
   width: 24px;
@@ -187,7 +187,8 @@ textarea {
 }
 
 .post-title {
-  font-size: 1.4em
+  margin: 0;
+  font-size: 1.4em;
 }
 
 .post-meta {
@@ -379,9 +380,15 @@ textarea {
   background-color: #fff
 }
 
+.widget-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .widget-list {
+  margin: 0;
   list-style: none;
-  padding: 0
+  padding: 0;
 }
 
 .widget-list li {

@@ -14,7 +14,7 @@
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- 使用url函数转换相关路径 -->
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="//unpkg.com/modern-normalize@0.3.0/modern-normalize.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.min.css'); ?>">
 
